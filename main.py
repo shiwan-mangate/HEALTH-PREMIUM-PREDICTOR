@@ -1,5 +1,5 @@
 import streamlit as st
-from predictionhelper import predict
+from prediction_helper import predict
 
 
 st.title('HEALTH INSURANCE PREDICTION APP')
