@@ -70,14 +70,16 @@ Applied one-hot encoding to convert categorical variables into numerical format 
 Feature Engineering:
 Several new features were created to capture more nuanced relationships:
 
-New Feature Name	Description
-age_income_ratio	Ratio of age to income — reflects relative earning capacity.
-bmi_smoking_interaction	Interaction term between BMI and smoking status — useful in health modeling.
-income_dependents_ratio	Income divided by number of dependents — indicates financial burden.
-is_high_bmi	Binary flag — 1 if BMI category is "Obese" or "Overweight".
-is_smoker	Binary flag — 1 if smoking status is "Smoker".
-region_encoded	Numerical encoding of region for distance-based models.
-insurance_plan_encoded	Encoded values for insurance plan types.
+| New Feature Name         | Description                                                                      |
+|--------------------------|----------------------------------------------------------------------------------|
+| `age_income_ratio`       | Ratio of age to income — reflects relative earning capacity.                    |
+| `bmi_smoking_interaction`| Interaction term between BMI and smoking status — useful in health modeling.    |
+| `income_dependents_ratio`| Income divided by number of dependents — indicates financial burden.            |
+| `is_high_bmi`            | Binary flag — 1 if BMI category is "Obese" or "Overweight".                     |
+| `is_smoker`              | Binary flag — 1 if smoking status is "Smoker".                                  |
+| `region_encoded`         | Numerical encoding of region for distance-based models.                         |
+| `insurance_plan_encoded` | Encoded values for insurance plan types.                                        |
+
 
 Missing Value Treatment:
 
