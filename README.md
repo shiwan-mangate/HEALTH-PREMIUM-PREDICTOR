@@ -4,7 +4,8 @@
 
 Predicting health insurance premium based on personal and lifestyle information using machine learning.
 
-![App Screenshot](https://github.com/shiwan-mangate/health-premium-predictor/blob/main/assets/app_screenshot.png)
+![App Screenshot](Health_premium_predictor_app.png)
+
 
 ---
 
