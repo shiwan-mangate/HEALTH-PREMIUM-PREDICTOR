@@ -48,21 +48,46 @@ An additional feature `genetical_risk` was engineered from `Medical_History` to 
 
 ---
 
-## 🧹 Data Preprocessing
+🧹 Data Preprocessing & Feature Engineering
+A robust data preprocessing pipeline was developed to clean, transform, and enrich the dataset before feeding it into machine learning models.
 
-The following steps were applied:
+✅ Key Steps in Preprocessing:
+Handling Outliers:
 
-- ✅ **Outlier Detection**: Boxplots were used to visualize outliers.
-- ✅ **Outlier Handling**: Extremely high incomes were clipped using:
+Boxplots were used to visualize potential outliers in numerical features.
 
-```python
+Outliers in the Income_Lakhs column were removed using the 99.9th percentile threshold:
+
+python
+Copy
+Edit
 quantile_threshold = df.income_lakhs.quantile(0.999)
 df = df[df.income_lakhs < quantile_threshold]
-```
+Encoding Categorical Features:
 
-- ✅ **Feature Engineering**: `genetical_risk` created from `Medical_History`.
-- ✅ **Encoding**: Label Encoding for categorical variables.
-- ✅ **Scaling**: StandardScaler used for numerical features.
+Applied one-hot encoding to convert categorical variables into numerical format for model compatibility.
+
+Feature Engineering:
+Several new features were created to capture more nuanced relationships:
+
+New Feature Name	Description
+age_income_ratio	Ratio of age to income — reflects relative earning capacity.
+bmi_smoking_interaction	Interaction term between BMI and smoking status — useful in health modeling.
+income_dependents_ratio	Income divided by number of dependents — indicates financial burden.
+is_high_bmi	Binary flag — 1 if BMI category is "Obese" or "Overweight".
+is_smoker	Binary flag — 1 if smoking status is "Smoker".
+region_encoded	Numerical encoding of region for distance-based models.
+insurance_plan_encoded	Encoded values for insurance plan types.
+
+Missing Value Treatment:
+
+Verified dataset completeness and applied imputation strategies (if necessary).
+
+Feature Scaling:
+
+Normalized continuous features where required to enhance model performance.
+
+
 
 ---
 
